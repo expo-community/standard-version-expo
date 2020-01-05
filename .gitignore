@@ -1,0 +1,17 @@
+# project
+/build
+
+# dependencies
+/node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+yarn.lock
+
+# testing
+/.jest
+/coverage
+
+# misc
+.DS_Store
+.vscode

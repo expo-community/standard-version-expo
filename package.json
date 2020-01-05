@@ -1,0 +1,54 @@
+{
+	"name": "standard-version-expo",
+	"version": "0.0.0",
+	"description": "Automatic Expo versioning with Standard Version",
+	"keywords": [
+		"expo",
+		"standard",
+		"version",
+		"release",
+		"bycedric"
+	],
+	"author": "Cedric van Putten <me@bycedric.com>",
+	"license": "MIT",
+	"homepage": "https://github.com/bycedric/standard-version-expo#readme",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/bycedric/standard-version-expo.git"
+	},
+	"bugs": {
+		"url": "https://github.com/bycedric/standard-version-expo/issues"
+	},
+	"main": "manifest/version.js",
+	"files": [
+		"android",
+		"build",
+		"ios",
+		"manifest"
+	],
+	"scripts": {
+		"test": "jest",
+		"lint": "eslint ./src ./test --ext ts,tsx",
+		"build": "tsc",
+		"clean": "git clean -xdf build"
+	},
+	"dependencies": {
+		"@expo/config": "^2.5.3",
+		"@expo/json-file": "^8.2.3",
+		"detect-indent": "^6.0.0",
+		"detect-newline": "^3.1.0",
+		"semver": "^7.1.1"
+	},
+	"devDependencies": {
+		"@types/jest": "^24.0.25",
+		"@types/node": "^13.1.4",
+		"@types/semver": "^6.2.0",
+		"@typescript-eslint/eslint-plugin": "^2.14.0",
+		"@typescript-eslint/parser": "^2.14.0",
+		"eslint": "^6.8.0",
+		"eslint-plugin-jest": "^23.3.0",
+		"jest": "^24.9.0",
+		"ts-jest": "^24.2.0",
+		"typescript": "^3.7.4"
+	}
+}
