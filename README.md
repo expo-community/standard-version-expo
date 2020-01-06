@@ -20,7 +20,11 @@
 Standard version is a tool to automate the versioning of your project using semver and [conventional commits][link-conventional].
 This package includes some helpful bumpers to update the Expo manifest automatically.
 With these bumpers you can automate updating the [`version`][link-expo-version], [Android `versionCode`][link-expo-android], and/or [iOS `buildNumber`][link-expo-ios].
-Combining this, you should be able to automate versioning of your app by using a single command `npx standard-version`.
+Combining this, you should be able to automate versioning of your app by using a single command.
+
+```bash
+$ npx standard-version
+```
 
 ## Getting started
 
@@ -53,7 +57,7 @@ To test if your configuration works as expected, you can run standard version in
 This shows you what will happen, without actually applying the versions and tags.
 
 ```bash
-$ npx standard-version --dry-mode
+$ npx standard-version --dry-run
 ```
 
 ## Usage
