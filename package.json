@@ -30,7 +30,9 @@
 		"test": "jest",
 		"lint": "eslint ./src ./test --ext ts,tsx",
 		"build": "tsc",
-		"clean": "git clean -xdf build"
+		"clean": "git clean -xdf build",
+		"release": "standard-version",
+		"prerelease": "npm run clean && npm run build"
 	},
 	"dependencies": {
 		"@expo/config": "^2.5.3",
@@ -48,6 +50,7 @@
 		"eslint": "^6.8.0",
 		"eslint-plugin-jest": "^23.3.0",
 		"jest": "^24.9.0",
+		"standard-version": "^7.0.1",
 		"ts-jest": "^24.2.0",
 		"typescript": "^3.7.4"
 	}
