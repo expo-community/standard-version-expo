@@ -3,13 +3,14 @@
     <p>Automatic <a href="https://github.com/expo/expo">Expo</a> versioning with <a href="https://github.com/conventional-changelog/standard-version">Standard Version</a></p>
     <sup>
         <a href="https://github.com/bycedric/standard-version-expo/releases">
-            <img src="https://img.shields.io/github/release/byCedric/standard-version-expo/all.svg" alt="releases" />
+            <img src="https://img.shields.io/github/release/byCedric/standard-version-expo/all.svg?style=flat-square" alt="releases" />
         </a>
-        <a href="https://travis-ci.com/byCedric/standard-version-expo">
-            <img src="https://img.shields.io/travis/com/byCedric/standard-version-expo/master.svg" alt="builds" />
+        <a href="https://github.com/bycedric/standard-version-expo/actions">
+            <img src="https://img.shields.io/github/workflow/status/byCedric/standard-version-expo/CI/master.svg?style=flat-square" alt="builds" />
         </a>
     </sup>
     <br />
+		<br />
     <br />
     <pre>npm i -D standard-version@next standard-version-expo</pre>
 </div>
