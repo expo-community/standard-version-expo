@@ -20,37 +20,37 @@
 Standard version is a tool to automate the versioning of your project using semver and [conventional commits][link-conventional].
 This package includes some helpful bumpers to update the Expo manifest automatically.
 With these bumpers you can automate updating the [`version`][link-expo-version], [Android `versionCode`][link-expo-android], and/or [iOS `buildNumber`][link-expo-ios].
-Combining this, you should be able to automate versioning of your app by using a single command.
+You should be able to automate versioning of your app by using a single command, like:
 
 ```bash
-$ npx standard-version
+$ npx standard-version --release-as minor
 ```
 
 ## Getting started
 
 It's recommended to install both Standard Version and this package as `devDependency`.
-You can do this with the npm command listed above.
+You can do this with the npm command listed at the top of this read me.
 After you installed the packages, we need to [configure Standard Version using any of the configuration methods listed here][link-standard-version].
 Here is an example configuration that updates the version, Android `versionCode`, and iOS `buildNumber` using the recommended approaches.
 
-```json
-// .versionrc
-{
-  "bumpFiles": [
+```js
+// .versionrc.js
+module.exports = {
+  bumpFiles: [
     {
-      "filename": "app.json",
-      "updater": "node_modules/standard-version-expo"
+      filename: 'app.json',
+      updater: require.resolve('standard-version-expo'),
     },
     {
-      "filename": "app.json",
-      "updater": "node_modules/standard-version-expo/android"
+      filename: 'app.json',
+      updater: require.resolve('standard-version-expo/android'),
     },
     {
-      "filename": "app.json",
-      "updater": "node_modules/standard-version-expo/ios"
+      filename: 'app.json',
+      updater: require.resolve('standard-version-expo/ios'),
     }
   ]
-}
+};
 ```
 
 To test if your configuration works as expected, you can run standard version in dry mode.
