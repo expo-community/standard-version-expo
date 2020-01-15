@@ -8,6 +8,9 @@
         <a href="https://github.com/bycedric/standard-version-expo/actions">
             <img src="https://img.shields.io/github/workflow/status/byCedric/standard-version-expo/CI/master.svg?style=flat-square" alt="builds" />
         </a>
+        <a href="https://dev.to/bycedric/simplify-expo-releases-with-standard-version-2f4o">
+            <img src="https://img.shields.io/badge/guide-dev.to-lightgrey?style=flat-square" alt="guide" />
+        </a>
     </sup>
     <br />
 		<br />
@@ -89,7 +92,6 @@ It's a deterministic solution that removes some of the ambiguity of incremental 
 > The method initially uses the Android minimum API level. For Expo, we replaced this with the major Expo SDK version.
 
 <div align="center">
-    <br />
     <br />
     with :heart: <strong>byCedric</strong>
     <br />
