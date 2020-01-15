@@ -9,15 +9,15 @@
 		"release",
 		"bycedric"
 	],
-	"author": "Cedric van Putten <me@bycedric.com>",
+	"author": "Cedric van Putten <me@bycedric.com> (https://bycedric.com)",
 	"license": "MIT",
-	"homepage": "https://github.com/bycedric/standard-version-expo#readme",
+	"homepage": "https://github.com/expo-community/standard-version-expo#readme",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/bycedric/standard-version-expo.git"
+		"url": "https://github.com/expo-community/standard-version-expo.git"
 	},
 	"bugs": {
-		"url": "https://github.com/bycedric/standard-version-expo/issues"
+		"url": "https://github.com/expo-community/standard-version-expo/issues"
 	},
 	"main": "manifest/version.js",
 	"files": [
