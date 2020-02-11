@@ -41,6 +41,9 @@ Here is an example configuration that updates the version, Android `versionCode`
 module.exports = {
   bumpFiles: [
     {
+      filename: 'package.json',
+    },
+    {
       filename: 'app.json',
       updater: require.resolve('standard-version-expo'),
     },
