@@ -1,6 +1,6 @@
 {
 	"name": "standard-version-expo",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Automatic Expo versioning with Standard Version",
 	"keywords": [
 		"expo",
