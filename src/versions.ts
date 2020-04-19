@@ -1,4 +1,4 @@
-import { AppJSONConfig } from '@expo/config';
+import { AppJSONConfig, getExpoSDKVersion } from '@expo/config';
 import { coerce as semver } from 'semver';
 
 /**
@@ -8,11 +8,8 @@ import { coerce as semver } from 'semver';
  * @see https://medium.com/@maxirosson/versioning-android-apps-d6ec171cfd82
  */
 export function getVersionCode(manifest: AppJSONConfig, version: string): number {
-	if (!manifest.expo.sdkVersion) {
-		throw new Error('Manifest must include `expo.sdkVersion` to calculate the version code.');
-	}
-
-	const expo = semver(manifest.expo.sdkVersion);
+	const sdk = getExpoSDKVersion(process.cwd(), manifest.expo);
+	const expo = semver(sdk);
 	const target = semver(version);
 
 	if (!expo) {
