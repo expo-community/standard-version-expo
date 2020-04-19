@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.2](https://github.com/expo-community/standard-version-expo/compare/1.0.0...1.0.2) (2020-04-19)
+
+
+### Code refactors
+
+* update repository references ([#2](https://github.com/expo-community/standard-version-expo/issues/2)) ([c9eb647](https://github.com/expo-community/standard-version-expo/commit/c9eb647a699bd0e51862751a142d0f5237de2a80))
+
+
+### Documentation changes
+
+* add link to guide on devto ([#1](https://github.com/expo-community/standard-version-expo/issues/1)) ([5e0e697](https://github.com/expo-community/standard-version-expo/commit/5e0e697c483b27d6c6b4653367df5d52d1641979))
+* add package.json to sample versionrc.js ([#3](https://github.com/expo-community/standard-version-expo/issues/3)) ([1a28eeb](https://github.com/expo-community/standard-version-expo/commit/1a28eeb29c0361a405df5bde2699bccda51146fe))
+
+
+### Other chores
+
+* **deps:** bump acorn from 5.7.3 to 5.7.4 ([#6](https://github.com/expo-community/standard-version-expo/issues/6)) ([3ffe688](https://github.com/expo-community/standard-version-expo/commit/3ffe68808482a4d00b9c8b644d51803ce08b8a6e))
+
+
+### Bug fixes
+
+* use proper ios aliases instead of prefixed one ([#5](https://github.com/expo-community/standard-version-expo/issues/5)) ([5a96dbd](https://github.com/expo-community/standard-version-expo/commit/5a96dbd69b0e1267c5b66e306e3a22d46acbb2b7))
+* use sdk version from node modules ([#8](https://github.com/expo-community/standard-version-expo/issues/8)) ([203e151](https://github.com/expo-community/standard-version-expo/commit/203e15192790c8b716357c307039224a0f2d96b2))
+
 ### [1.0.1](https://github.com/expo-community/standard-version-expo/compare/1.0.0...1.0.1) (2020-02-18)
 
 
