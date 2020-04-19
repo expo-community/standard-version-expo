@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.3](https://github.com/expo-community/standard-version-expo/compare/1.0.2...1.0.3) (2020-04-19)
+
+
+### Bug fixes
+
+* add globby to dependencies for expo config ([4427369](https://github.com/expo-community/standard-version-expo/commit/44273694274547df8a890f2c42fec5b02d98a4ed))
+
+
+### Documentation changes
+
+* add missing version error note ([3bd9494](https://github.com/expo-community/standard-version-expo/commit/3bd94943f9a8fe316911cc717dc580e510bc48b5))
+
 ### [1.0.2](https://github.com/expo-community/standard-version-expo/compare/1.0.0...1.0.2) (2020-04-19)
 
 
