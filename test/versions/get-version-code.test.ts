@@ -1,5 +1,6 @@
-import * as stub from './stub';
-import { getVersionCode } from '../src/versions';
+import path from 'path';
+import * as stub from '../stub';
+import { getVersionCode } from '../../src/versions';
 
 describe('getVersionCode', () => {
 	it('throws when `expo.sdkVersion` is missing', () => {
@@ -7,7 +8,7 @@ describe('getVersionCode', () => {
 		delete manifest.expo.sdkVersion;
 
 		expect(() => getVersionCode(manifest, '1.0.0')).toThrowError(
-			'Manifest must include `expo.sdkVersion`',
+			'Cannot determine which native SDK version',
 		);
 	});
 
@@ -26,6 +27,13 @@ describe('getVersionCode', () => {
 		);
 	});
 
+	it('returns 350101112 for sdk 35 and version 10.11.12', () => {
+		const manifest = stub.manifest();
+		manifest.expo.sdkVersion = '35.0.0';
+
+		expect(getVersionCode(manifest, '10.11.12')).toBe(350101112);
+	});
+
 	it('returns 360010000 for sdk 36 and version 1.0.0', () => {
 		const manifest = stub.manifest();
 		manifest.expo.sdkVersion = '36.0.0';
@@ -33,10 +41,11 @@ describe('getVersionCode', () => {
 		expect(getVersionCode(manifest, '1.0.0')).toBe(360010000);
 	});
 
-	it('returns 350101112 for sdk 35 and version 10.11.12', () => {
+	it('returns 370030201 for sdk 37 and version 3.2.1 from package.json', () => {
 		const manifest = stub.manifest();
-		manifest.expo.sdkVersion = '35.0.0';
+		manifest.expo.nodeModulesPath = path.resolve(__dirname, './stubs');
+		delete manifest.expo.sdkVersion;
 
-		expect(getVersionCode(manifest, '10.11.12')).toBe(350101112);
+		expect(getVersionCode(manifest, '3.2.1')).toBe(370030201);
 	});
 });
