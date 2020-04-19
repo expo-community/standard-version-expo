@@ -29,6 +29,8 @@ You should be able to automate versioning of your app by using a single command,
 $ npx standard-version --release-as minor
 ```
 
+> If you receive an error like `Invalid Version: undefined`, make sure your `package.json` has a starting `version`.
+
 ## Getting started
 
 It's recommended to install both Standard Version and this package as `devDependency`.
