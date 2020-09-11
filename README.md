@@ -61,6 +61,34 @@ module.exports = {
 };
 ```
 
+If you're using the [bare workflow][link-bare-workflow], you'll need a couple
+more bumpers to keep your native project config files in sync:
+
+```js
+// .versionrc.js
+const sdkVersion = '37.0.0';  // or pull from app.json
+
+module.exports = [
+  // ...
+  {
+    filename: 'ios/<YourAppName>/Info.plist',
+    updater: require.resolve('standard-version-expo/ios/native/app-version'),
+  },
+  {
+    filename: 'ios/<YourAppName>/Info.plist',
+    updater: require.resolve('standard-version-expo/ios/native/buildnum/increment'),
+  },
+  {
+    filename: 'android/app/build.gradle',
+    updater: require.resolve('standard-version-expo/android/native/app-version'),
+  },
+  {
+    filename: 'android/app/build.gradle',
+    updater: require.resolve('standard-version-expo/android/native/buildnum/code')(sdkVersion),
+  },
+];
+```
+
 To test if your configuration works as expected, you can run standard version in dry mode.
 This shows you what will happen, without actually applying the versions and tags.
 
@@ -87,6 +115,28 @@ updater             | example      | description
 `ios/increment`     | `9`          | Replace `expo.ios.buildNumber` with an incremental version.
 `ios/version`       | `3.2.1`      | Replace `expo.ios.buildNumber` with the exact calculated semver. (**recommended**)
 
+And for the native build config files:
+
+updater                         | example       | file path                      | description
+---                             | ---           | ---                            | ---
+`native/ios/app-version`        | `3.2.1`       | `ios/<YourAppName>/Info.plist` | Replace `CFBundleShortVersionString` with the exact calculated semver.
+`native/ios/buildnum/code`      | `36030201`    | `ios/<YourAppName>/Info.plist` | Replace `CFBundleVersion` with the [method described by Maxi Rosson][link-version-code].
+`native/ios/buildnum/increment` | `8`           | `ios/<YourAppName>/Info.plist` | Replace `CFBundleVersion` with an incremental version.
+`native/ios/buildnum/version`   | `3.2.1`       | `ios/<YourAppName>/Info.plist` | Replace `CFBundleVersion` with the exact calculated semver. (**recommended**)
+`native/android/app-version`        | `3.2.1`       | `android/app/build.gradle` | Replace `versionName` with the exact calculated semver.
+`native/android/buildnum/code`      | `36030201`    | `android/app/build.gradle` | Replace `versionCode` with the [method described by Maxi Rosson][link-version-code]. (**recommended**)
+`native/android/buildnum/increment` | `8`           | `android/app/build.gradle` | Replace `versionCode` with an incremental version.
+
+Note that the `native/{ios,android}/buildnum/code` bumpers are only supported
+in `.versionrc.js` file, not in `.versionrc` or `.versionrc.json` files.
+Since a bumper only operates on one file, the Expo manifest is unavailable to
+the bumper when it's operating on a native build config file. Because of this,
+you must provide the Expo SDK version via javascript (see example above).
+
+However, this means that you can also use these bumpers with non-Expo React
+Native projects, and even plain Android projects, simply by supplying the
+minimum Android API level rather than the Expo SDK version.
+
 ### Version code
 
 Semver is one of the most popular versioning methods; it generates a string with a syntax that even humans can read.
@@ -108,3 +158,4 @@ It's a deterministic solution that removes some of the ambiguity of incremental 
 [link-expo-version]: https://docs.expo.io/versions/latest/workflow/configuration#version
 [link-standard-version]: https://github.com/conventional-changelog/standard-version#configuration
 [link-version-code]: https://medium.com/@maxirosson/versioning-android-apps-d6ec171cfd82
+[link-bare-workflow]: https://docs.expo.io/introduction/managed-vs-bare/

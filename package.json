@@ -37,9 +37,11 @@
 	"dependencies": {
 		"@expo/config": "^3.1.2",
 		"@expo/json-file": "^8.2.10",
+		"@types/plist": "^3.0.2",
 		"detect-indent": "^6.0.0",
 		"detect-newline": "^3.1.0",
 		"globby": "^11.0.0",
+		"plist": "^3.0.1",
 		"semver": "^7.3.2"
 	},
 	"devDependencies": {
