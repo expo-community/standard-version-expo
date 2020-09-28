@@ -1,1 +1,1 @@
-module.exports = require('../../build/bumpers/native/buildnum/ios-increment');
+module.exports = require('../../../build/bumpers/native/buildnum/ios-increment');

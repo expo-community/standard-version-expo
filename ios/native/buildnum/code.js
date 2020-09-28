@@ -1,1 +1,1 @@
-module.exports = require('../../build/bumpers/native/buildnum/ios-code');
+module.exports = require('../../../build/bumpers/native/buildnum/ios-code').default;

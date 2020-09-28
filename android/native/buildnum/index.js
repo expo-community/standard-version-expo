@@ -1,1 +1,1 @@
-module.exports = require('../../build/bumpers/native/buildnum/android-code');
+module.exports = require('../../../build/bumpers/native/buildnum/android-code').default;
