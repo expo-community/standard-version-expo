@@ -8,8 +8,12 @@ import { coerce as semver } from 'semver';
  * @see https://medium.com/@maxirosson/versioning-android-apps-d6ec171cfd82
  */
 export function getVersionCode(manifest: AppJSONConfig, version: string): number {
-	const sdk = getExpoSDKVersion(process.cwd(), manifest.expo);
-	const expo = semver(sdk);
+	const sdkVersion = getExpoSDKVersion(process.cwd(), manifest.expo);
+	return getVersionCodeFromSdkVersion(sdkVersion, version);
+}
+
+export function getVersionCodeFromSdkVersion(sdkVersion: string, version: string): number {
+	const expo = semver(sdkVersion);
 	const target = semver(version);
 
 	if (!expo) {

@@ -1,6 +1,6 @@
 import path from 'path';
 import * as stub from '../stub';
-import { getVersionCode } from '../../src/versions';
+import { getVersionCode, getVersionCodeFromSdkVersion } from '../../src/versions';
 
 describe('getVersionCode', () => {
 	it('throws when `expo.sdkVersion` is missing', () => {
@@ -47,5 +47,15 @@ describe('getVersionCode', () => {
 		delete manifest.expo.sdkVersion;
 
 		expect(getVersionCode(manifest, '3.2.1')).toBe(370030201);
+	});
+});
+
+describe('getVersionCodeFromSdkVersion', () => {
+	it('returns 370030201 for sdk 37 and version 3.2.1', () => {
+		expect(getVersionCodeFromSdkVersion('37.0.0', '3.2.1')).toBe(370030201);
+	});
+
+	it('returns 280030201 for API level 28 and version 3.2.1', () => {
+		expect(getVersionCodeFromSdkVersion('28', '3.2.1')).toBe(280030201);
 	});
 });
