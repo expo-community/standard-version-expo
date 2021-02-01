@@ -105,7 +105,14 @@ const iosWriteVersion = (contents: string, key: string, value: string): string =
  * It replaces the value in the `Info.plist` contents and returns the new contents as string.
  */
 export const iosAppVersionWriter: VersionWriter = (contents, version) => (
-	iosWriteVersion(contents, 'CFBundleShortVersionString', version)
+	iosWriteVersion(
+		contents,
+		'CFBundleShortVersionString',
+
+		// trim any prerelease suffixes; this string
+		// must strictly be an x.y.z version.
+		version.split('-')[0],
+	)
 );
 
 /**
