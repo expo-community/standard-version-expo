@@ -1,4 +1,4 @@
 module.exports = {
-	collectCoverageFrom: ['src/**/*.{ts,tsx}'],
-	preset: 'ts-jest',
+  collectCoverageFrom: ['src/**/*.{ts,tsx}'],
+  preset: 'ts-jest',
 };

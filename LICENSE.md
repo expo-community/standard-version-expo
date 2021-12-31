@@ -1,4 +1,3 @@
-
 # The MIT License (MIT)
 
 Copyright (c) 2019-present Cedric van Putten <me@bycedric.com>

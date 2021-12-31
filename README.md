@@ -1,21 +1,20 @@
 <div align="center">
-    <h1>Standard Version Expo</h1>
-    <p>Automatic <a href="https://github.com/expo/expo">Expo</a> versioning with <a href="https://github.com/conventional-changelog/standard-version">Standard Version</a></p>
-    <sup>
-        <a href="https://github.com/expo-community/standard-version-expo/releases">
-            <img src="https://img.shields.io/github/release/expo-community/standard-version-expo/all.svg?style=flat-square" alt="releases" />
-        </a>
-        <a href="https://github.com/expo-community/standard-version-expo/actions">
-            <img src="https://img.shields.io/github/workflow/status/expo-community/standard-version-expo/CI/master.svg?style=flat-square" alt="builds" />
-        </a>
-        <a href="https://dev.to/bycedric/simplify-expo-releases-with-standard-version-2f4o">
-            <img src="https://img.shields.io/badge/guide-dev.to-lightgrey?style=flat-square" alt="guide" />
-        </a>
-    </sup>
-    <br />
-		<br />
-    <br />
-    <pre>npm i -D standard-version@next standard-version-expo</pre>
+  <h1>Standard Version Expo</h1>
+  <p>Automatic <a href="https://github.com/expo/expo">Expo</a> versioning with <a href="https://github.com/conventional-changelog/standard-version">Standard Version</a></p>
+  <p>
+    <a href="https://github.com/expo-community/standard-version-expo/releases">
+      <img src="https://img.shields.io/github/release/expo-community/standard-version-expo/all.svg" alt="releases" />
+    </a>
+    <a href="https://github.com/expo-community/standard-version-expo/actions">
+      <img src="https://img.shields.io/github/workflow/status/expo-community/standard-version-expo/CI/master.svg" alt="builds" />
+    </a>
+    <a href="https://dev.to/bycedric/simplify-expo-releases-with-standard-version-2f4o">
+      <img src="https://img.shields.io/badge/guide-dev.to-lightgrey" alt="guide" />
+    </a>
+  </p>
+  <br />
+  <br />
+  <pre>npm i -D standard-version@next standard-version-expo</pre>
 </div>
 
 ## What's inside?
@@ -56,8 +55,8 @@ module.exports = {
     {
       filename: 'app.json',
       updater: require.resolve('standard-version-expo/ios'),
-    }
-  ]
+    },
+  ],
 };
 ```
 
@@ -74,18 +73,18 @@ Standard Version's version bumpers are pretty simple; each bump only updates a s
 This package exposes multiple kinds of updaters, for different areas of the manifest.
 You can "compose" your own set of `bumpFiles` entries to suit your needs.
 
-updater             | example      | description
----                 | ---          | ---
-`<root>`            | `3.2.1`      | _alias of `manifest/version`_
-`manifest`          | `3.2.1`      | _alias of `manifest/version`_
-`manifest/version`  | `3.2.1`      | Replace `expo.version` with the exact calculated semver. (**recommended**)
-`android`           | `360030201`  | _alias of `android/code`_
-`android/code`      | `350010000`  | Replace `expo.android.versionCode` with the [method described by Maxi Rosson][link-version-code]. (**recommended**)
-`android/increment` | `8`          | Replace `expo.android.versionCode` with an incremental version.
-`ios`               | `3.2.1`      | _alias of `ios/version`_
-`ios/code`          | `360030201`  | Replace `expo.ios.buildNumber` with the [method described by Maxi Rosson][link-version-code].
-`ios/increment`     | `9`          | Replace `expo.ios.buildNumber` with an incremental version.
-`ios/version`       | `3.2.1`      | Replace `expo.ios.buildNumber` with the exact calculated semver. (**recommended**)
+| updater             | example     | description                                                                                                         |
+| ------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------- |
+| `<root>`            | `3.2.1`     | _alias of `manifest/version`_                                                                                       |
+| `manifest`          | `3.2.1`     | _alias of `manifest/version`_                                                                                       |
+| `manifest/version`  | `3.2.1`     | Replace `expo.version` with the exact calculated semver. (**recommended**)                                          |
+| `android`           | `360030201` | _alias of `android/code`_                                                                                           |
+| `android/code`      | `350010000` | Replace `expo.android.versionCode` with the [method described by Maxi Rosson][link-version-code]. (**recommended**) |
+| `android/increment` | `8`         | Replace `expo.android.versionCode` with an incremental version.                                                     |
+| `ios`               | `3.2.1`     | _alias of `ios/version`_                                                                                            |
+| `ios/code`          | `360030201` | Replace `expo.ios.buildNumber` with the [method described by Maxi Rosson][link-version-code].                       |
+| `ios/increment`     | `9`         | Replace `expo.ios.buildNumber` with an incremental version.                                                         |
+| `ios/version`       | `3.2.1`     | Replace `expo.ios.buildNumber` with the exact calculated semver. (**recommended**)                                  |
 
 ### Version code
 
@@ -97,9 +96,9 @@ It's a deterministic solution that removes some of the ambiguity of incremental 
 > The method initially uses the Android minimum API level. For Expo, we replaced this with the major Expo SDK version.
 
 <div align="center">
-    <br />
-    with :heart: <strong>byCedric</strong>
-    <br />
+  <br />
+  with :heart: <strong>byCedric</strong>
+  <br />
 </div>
 
 [link-conventional]: https://www.conventionalcommits.org/en/v1.0.0/

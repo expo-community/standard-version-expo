@@ -1,58 +1,59 @@
 {
-	"name": "standard-version-expo",
-	"version": "1.0.3",
-	"description": "Automatic Expo versioning with Standard Version",
-	"keywords": [
-		"expo",
-		"standard",
-		"version",
-		"release",
-		"bycedric"
-	],
-	"author": "Cedric van Putten <me@bycedric.com> (https://bycedric.com)",
-	"license": "MIT",
-	"homepage": "https://github.com/expo-community/standard-version-expo#readme",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/expo-community/standard-version-expo.git"
-	},
-	"bugs": {
-		"url": "https://github.com/expo-community/standard-version-expo/issues"
-	},
-	"main": "manifest/version.js",
-	"files": [
-		"android",
-		"build",
-		"ios",
-		"manifest"
-	],
-	"scripts": {
-		"test": "jest",
-		"lint": "eslint ./src ./test --ext ts,tsx",
-		"build": "tsc",
-		"clean": "git clean -xdf build",
-		"release": "standard-version",
-		"prerelease": "npm run clean && npm run build"
-	},
-	"dependencies": {
-		"@expo/config": "^3.1.2",
-		"@expo/json-file": "^8.2.10",
-		"detect-indent": "^6.0.0",
-		"detect-newline": "^3.1.0",
-		"globby": "^11.0.0",
-		"semver": "^7.3.2"
-	},
-	"devDependencies": {
-		"@types/jest": "^25.2.1",
-		"@types/node": "^13.13.0",
-		"@types/semver": "^7.1.0",
-		"@typescript-eslint/eslint-plugin": "^2.28.0",
-		"@typescript-eslint/parser": "^2.28.0",
-		"eslint": "^6.8.0",
-		"eslint-plugin-jest": "^23.8.2",
-		"jest": "^25.3.0",
-		"standard-version": "^7.1.0",
-		"ts-jest": "^25.4.0",
-		"typescript": "^3.8.3"
-	}
+  "name": "standard-version-expo",
+  "version": "1.0.3",
+  "description": "Automatic Expo versioning with Standard Version",
+  "keywords": [
+    "expo",
+    "standard",
+    "version",
+    "release",
+    "bycedric"
+  ],
+  "author": "Cedric van Putten <me@bycedric.com> (https://bycedric.com)",
+  "license": "MIT",
+  "homepage": "https://github.com/expo-community/standard-version-expo#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/expo-community/standard-version-expo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/expo-community/standard-version-expo/issues"
+  },
+  "main": "manifest/version.js",
+  "files": [
+    "android",
+    "build",
+    "ios",
+    "manifest"
+  ],
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint . --ext js,ts",
+    "build": "tsc",
+    "clean": "git clean -xdf build",
+    "release": "standard-version",
+    "prerelease": "npm run clean && npm run build"
+  },
+  "dependencies": {
+    "@expo/config": "^3.1.2",
+    "@expo/json-file": "^8.2.10",
+    "detect-indent": "^6.0.0",
+    "detect-newline": "^3.1.0",
+    "globby": "^11.0.0",
+    "semver": "^7.3.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.13.0",
+    "@types/semver": "^7.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "@typescript-eslint/parser": "^5.8.1",
+    "eslint": "^7.32.0",
+    "eslint-config-universe": "^9.0.0",
+    "jest": "^25.3.0",
+    "prettier": "^2.5.1",
+    "standard-version": "^7.1.0",
+    "ts-jest": "^25.4.0",
+    "typescript": "^3.8.3"
+  }
 }

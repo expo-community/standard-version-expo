@@ -15,9 +15,9 @@ export const readVersion = iosVersionReader;
  * @see https://medium.com/@maxirosson/versioning-android-apps-d6ec171cfd82
  */
 export const writeVersion: VersionWriter = (contents, version) => {
-	const manifest = parse(contents);
-	manifest.expo.ios = manifest.expo.ios || {};
-	manifest.expo.ios.buildNumber = String(getVersionCode(manifest, version));
+  const manifest = parse(contents);
+  manifest.expo.ios = manifest.expo.ios || {};
+  manifest.expo.ios.buildNumber = String(getVersionCode(manifest, version));
 
-	return serialize(manifest, contents);
+  return serialize(manifest, contents);
 };

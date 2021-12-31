@@ -11,9 +11,9 @@ export const readVersion = iosVersionReader;
  * Write the manifest version to the `expo.ios.buildNumber` property.
  */
 export const writeVersion: VersionWriter = (contents, version) => {
-	const manifest = parse(contents);
-	manifest.expo.ios = manifest.expo.ios || {};
-	manifest.expo.ios.buildNumber = version;
+  const manifest = parse(contents);
+  manifest.expo.ios = manifest.expo.ios || {};
+  manifest.expo.ios.buildNumber = version;
 
-	return serialize(manifest, contents);
+  return serialize(manifest, contents);
 };

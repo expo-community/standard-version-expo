@@ -8,17 +8,17 @@ import { coerce as semver } from 'semver';
  * @see https://medium.com/@maxirosson/versioning-android-apps-d6ec171cfd82
  */
 export function getVersionCode(manifest: AppJSONConfig, version: string): number {
-	const sdk = getExpoSDKVersion(process.cwd(), manifest.expo);
-	const expo = semver(sdk);
-	const target = semver(version);
+  const sdk = getExpoSDKVersion(process.cwd(), manifest.expo);
+  const expo = semver(sdk);
+  const target = semver(version);
 
-	if (!expo) {
-		throw new Error('Could not parse the `expo.sdkVersion` from the manifest.');
-	}
+  if (!expo) {
+    throw new Error('Could not parse the `expo.sdkVersion` from the manifest.');
+  }
 
-	if (!target) {
-		throw new Error('Could not parse the new version from standard version.');
-	}
+  if (!target) {
+    throw new Error('Could not parse the new version from standard version.');
+  }
 
-	return (expo.major * 10000000) + (target.major * 10000) + (target.minor * 100) + target.patch;
+  return expo.major * 10000000 + target.major * 10000 + target.minor * 100 + target.patch;
 }

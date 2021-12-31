@@ -12,18 +12,17 @@ export const readVersion = iosVersionReader;
  * This uses the an incremental approach, and ignores the provided version.
  */
 export const writeVersion: VersionWriter = (contents, _version) => {
-	const manifest = parse(contents);
-	manifest.expo.ios = manifest.expo.ios || {};
+  const manifest = parse(contents);
+  manifest.expo.ios = manifest.expo.ios || {};
 
-	const buildNumber = manifest.expo.ios.buildNumber !== undefined
-		? Number(manifest.expo.ios.buildNumber)
-		: 0;
+  const buildNumber =
+    manifest.expo.ios.buildNumber !== undefined ? Number(manifest.expo.ios.buildNumber) : 0;
 
-	if (Number.isNaN(buildNumber)) {
-		throw new Error('Could not parse number from `expo.ios.buildNumber`.');
-	}
+  if (Number.isNaN(buildNumber)) {
+    throw new Error('Could not parse number from `expo.ios.buildNumber`.');
+  }
 
-	manifest.expo.ios.buildNumber = String(buildNumber + 1);
+  manifest.expo.ios.buildNumber = String(buildNumber + 1);
 
-	return serialize(manifest, contents);
+  return serialize(manifest, contents);
 };
