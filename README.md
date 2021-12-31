@@ -1,18 +1,17 @@
 <div align="center">
   <h1>Standard Version Expo</h1>
   <p>Automatic <a href="https://github.com/expo/expo">Expo</a> versioning with <a href="https://github.com/conventional-changelog/standard-version">Standard Version</a></p>
-  <sup>
+  <p>
     <a href="https://github.com/expo-community/standard-version-expo/releases">
-      <img src="https://img.shields.io/github/release/expo-community/standard-version-expo/all.svg?style=flat-square" alt="releases" />
+      <img src="https://img.shields.io/github/release/expo-community/standard-version-expo/all.svg" alt="releases" />
     </a>
     <a href="https://github.com/expo-community/standard-version-expo/actions">
-      <img src="https://img.shields.io/github/workflow/status/expo-community/standard-version-expo/CI/master.svg?style=flat-square" alt="builds" />
+      <img src="https://img.shields.io/github/workflow/status/expo-community/standard-version-expo/CI/master.svg" alt="builds" />
     </a>
     <a href="https://dev.to/bycedric/simplify-expo-releases-with-standard-version-2f4o">
-      <img src="https://img.shields.io/badge/guide-dev.to-lightgrey?style=flat-square" alt="guide" />
+      <img src="https://img.shields.io/badge/guide-dev.to-lightgrey" alt="guide" />
     </a>
-  </sup>
-  <br />
+  </p>
   <br />
   <br />
   <pre>npm i -D standard-version@next standard-version-expo</pre>
