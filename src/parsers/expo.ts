@@ -3,6 +3,8 @@ import jsonFile, { JSONObject } from '@expo/json-file';
 import detectIndent from 'detect-indent';
 import detectNewline from 'detect-newline';
 
+import { VersionReader } from '../types';
+
 const DEFAULT_INDENT = '  ';
 const DEFAULT_NEWLINE = '\n';
 
@@ -40,3 +42,17 @@ export function serialize(manifest: AppJSONConfig, raw = ''): string {
 
   return json.replace(/\n/g, newline) + newline;
 }
+
+/**
+ * The default android version reader.
+ * It reads the value from `expo.android.versionCode` and returns it as string.
+ */
+export const androidVersionReader: VersionReader = (contents) =>
+  String(parse(contents).expo.android?.versionCode || '');
+
+/**
+ * The default ios version reader.
+ * It reads the value from `expo.ios.buildNumber` and returns it as string.
+ */
+export const iosVersionReader: VersionReader = (contents) =>
+  parse(contents).expo.ios?.buildNumber || '';

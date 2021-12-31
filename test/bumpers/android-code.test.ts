@@ -1,4 +1,4 @@
-import { readVersion, writeVersion } from '../../src/bumpers/android-code';
+import { readVersion, writeVersion } from '../../src/bumpers/expo-android-code';
 import { getVersionCode } from '../../src/versions';
 import * as stub from '../stub';
 

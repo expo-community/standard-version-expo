@@ -1,4 +1,4 @@
-import { readVersion, writeVersion } from '../../src/bumpers/ios-code';
+import { readVersion, writeVersion } from '../../src/bumpers/expo-ios-code';
 import { getVersionCode } from '../../src/versions';
 import * as stub from '../stub';
 

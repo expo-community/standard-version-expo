@@ -1,4 +1,4 @@
-import { readVersion, writeVersion } from '../../src/bumpers/android-increment';
+import { readVersion, writeVersion } from '../../src/bumpers/expo-android-increment';
 import * as stub from '../stub';
 
 describe('readVersion', () => {

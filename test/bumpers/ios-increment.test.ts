@@ -1,4 +1,4 @@
-import { readVersion, writeVersion } from '../../src/bumpers/ios-increment';
+import { readVersion, writeVersion } from '../../src/bumpers/expo-ios-increment';
 import * as stub from '../stub';
 
 describe('readVersion', () => {
