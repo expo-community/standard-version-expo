@@ -1,1 +1,1 @@
-module.exports = require('../build/bumpers/ios-code');
+module.exports = require('../build/bumpers/expo-ios-code');

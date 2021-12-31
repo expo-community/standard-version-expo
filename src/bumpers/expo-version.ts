@@ -1,4 +1,4 @@
-import { parse, serialize } from '../expo';
+import { parse, serialize } from '../parsers/expo';
 import { VersionReader, VersionWriter } from '../types';
 
 /**

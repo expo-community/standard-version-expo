@@ -1,4 +1,4 @@
-import { readVersion, writeVersion } from '../../src/bumpers/ios-version';
+import { readVersion, writeVersion } from '../../src/bumpers/expo-ios-version';
 import * as stub from '../stub';
 
 describe('readVersion', () => {

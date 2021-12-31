@@ -1,8 +1,8 @@
 import detectIndent from 'detect-indent';
 import detectNewline from 'detect-newline';
 
-import * as expo from '../src/expo';
-import * as stub from './stub';
+import * as expo from '../../src/parsers/expo';
+import * as stub from '../stub';
 
 describe('parse', () => {
   it('throws when content is empty', () => {

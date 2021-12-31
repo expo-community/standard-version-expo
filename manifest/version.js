@@ -1,1 +1,1 @@
-module.exports = require('../build/bumpers/manifest-version');
+module.exports = require('../build/bumpers/expo-version');

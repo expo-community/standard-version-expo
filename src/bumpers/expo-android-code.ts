@@ -1,5 +1,4 @@
-import { parse, serialize } from '../expo';
-import { androidVersionReader } from '../helpers';
+import { parse, serialize, androidVersionReader } from '../parsers/expo';
 import { VersionWriter } from '../types';
 import { getVersionCode } from '../versions';
 

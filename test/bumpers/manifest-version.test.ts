@@ -1,4 +1,4 @@
-import { readVersion, writeVersion } from '../../src/bumpers/manifest-version';
+import { readVersion, writeVersion } from '../../src/bumpers/expo-version';
 import * as stub from '../stub';
 
 describe('readVersion', () => {

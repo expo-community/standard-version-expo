@@ -1,5 +1,4 @@
-import { parse, serialize } from '../expo';
-import { iosVersionReader } from '../helpers';
+import { parse, serialize, iosVersionReader } from '../parsers/expo';
 import { VersionWriter } from '../types';
 
 /**
