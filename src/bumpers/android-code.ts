@@ -15,9 +15,9 @@ export const readVersion = androidVersionReader;
  * @see https://medium.com/@maxirosson/versioning-android-apps-d6ec171cfd82
  */
 export const writeVersion: VersionWriter = (contents, version) => {
-	const manifest = parse(contents);
-	manifest.expo.android = manifest.expo.android || {};
-	manifest.expo.android.versionCode = getVersionCode(manifest, version);
+  const manifest = parse(contents);
+  manifest.expo.android = manifest.expo.android || {};
+  manifest.expo.android.versionCode = getVersionCode(manifest, version);
 
-	return serialize(manifest, contents);
+  return serialize(manifest, contents);
 };

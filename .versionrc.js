@@ -1,7 +1,7 @@
 module.exports = {
-	releaseCommitMessageFormat: 'chore: create new release {{currentTag}}',
-	tagPrefix: '',
-	types: [
+  releaseCommitMessageFormat: 'chore: create new release {{currentTag}}',
+  tagPrefix: '',
+  types: [
     { type: 'feat', section: 'New features' },
     { type: 'feature', section: 'New features' },
     { type: 'fix', section: 'Bug fixes' },

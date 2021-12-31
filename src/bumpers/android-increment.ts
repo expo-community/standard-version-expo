@@ -12,9 +12,9 @@ export const readVersion = androidVersionReader;
  * This uses the an incremental approach, and ignores the provided version.
  */
 export const writeVersion: VersionWriter = (contents, _version) => {
-	const manifest = parse(contents);
-	manifest.expo.android = manifest.expo.android || {};
-	manifest.expo.android.versionCode = (manifest.expo.android.versionCode || 0) + 1;
+  const manifest = parse(contents);
+  manifest.expo.android = manifest.expo.android || {};
+  manifest.expo.android.versionCode = (manifest.expo.android.versionCode || 0) + 1;
 
-	return serialize(manifest, contents);
+  return serialize(manifest, contents);
 };
