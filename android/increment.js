@@ -1,1 +1,1 @@
-module.exports = require('../build/bumpers/android-increment');
+module.exports = require('../build/bumpers/expo-android-increment');
