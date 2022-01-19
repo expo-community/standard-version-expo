@@ -73,18 +73,20 @@ Standard Version's version bumpers are pretty simple; each bump only updates a s
 This package exposes multiple kinds of updaters, for different areas of the manifest.
 You can "compose" your own set of `bumpFiles` entries to suit your needs.
 
-| updater             | example     | description                                                                                                         |
-| ------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------- |
-| `<root>`            | `3.2.1`     | _alias of `manifest/version`_                                                                                       |
-| `manifest`          | `3.2.1`     | _alias of `manifest/version`_                                                                                       |
-| `manifest/version`  | `3.2.1`     | Replace `expo.version` with the exact calculated semver. (**recommended**)                                          |
-| `android`           | `360030201` | _alias of `android/code`_                                                                                           |
-| `android/code`      | `350010000` | Replace `expo.android.versionCode` with the [method described by Maxi Rosson][link-version-code]. (**recommended**) |
-| `android/increment` | `8`         | Replace `expo.android.versionCode` with an incremental version.                                                     |
-| `ios`               | `3.2.1`     | _alias of `ios/version`_                                                                                            |
-| `ios/code`          | `360030201` | Replace `expo.ios.buildNumber` with the [method described by Maxi Rosson][link-version-code].                       |
-| `ios/increment`     | `9`         | Replace `expo.ios.buildNumber` with an incremental version.                                                         |
-| `ios/version`       | `3.2.1`     | Replace `expo.ios.buildNumber` with the exact calculated semver. (**recommended**)                                  |
+| updater             | example         | description                                                                                                         |
+| ------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `<root>`            | `3.2.1`         | _alias of `manifest/version`_                                                                                       |
+| `manifest`          | `3.2.1`         | _alias of `manifest/version`_                                                                                       |
+| `manifest/version`  | `3.2.1`         | Replace `expo.version` with the exact calculated semver. (**recommended**)                                          |
+| `android`           | `360030201`     | _alias of `android/code`_                                                                                           |
+| `android/code`      | `350010000`     | Replace `expo.android.versionCode` with the [method described by Maxi Rosson][link-version-code]. (**recommended**) |
+| `android/increment` | `8`             | Replace `expo.android.versionCode` with an incremental version.                                                     |
+| `android/timestamp` | `1642622748128` | Replace `expo.android.versionCode` with the result of `Date.now()`.                                                 |
+| `ios`               | `3.2.1`         | _alias of `ios/version`_                                                                                            |
+| `ios/code`          | `360030201`     | Replace `expo.ios.buildNumber` with the [method described by Maxi Rosson][link-version-code].                       |
+| `ios/increment`     | `9`             | Replace `expo.ios.buildNumber` with an incremental version.                                                         |
+| `ios/version`       | `3.2.1`         | Replace `expo.ios.buildNumber` with the exact calculated semver. (**recommended**)                                  |
+| `ios/timestamp`     | `1642622748128` | Replace `expo.ios.buildNumber` with the result of `Date.now()`.                                                     |
 
 ### Version code
 
